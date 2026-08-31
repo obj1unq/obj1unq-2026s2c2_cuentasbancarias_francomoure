@@ -58,4 +58,5 @@ var cuentaSecundaria = cuentaGastos
         return cuentaPrimaria.saldo() + cuentaSecundaria.saldo()
   }
 }
+esta mal este ultimo. hacer el ejercicio y los test para el miercoles
 
