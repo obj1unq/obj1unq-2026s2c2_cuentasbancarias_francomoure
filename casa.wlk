@@ -11,7 +11,7 @@ object cuentaCorriente{
   method extraer(monto){
       saldo -= monto
   }
-  method getSaldo(){
+  method saldo(){
       return saldo
   }
 }
@@ -25,7 +25,7 @@ object cuentaGastos{
     method extraer(monto){
         
     }
-    method getSaldo(){
+    method saldo(){
         return saldo
     }
 }
@@ -42,4 +42,4 @@ object cuentaCombinada{
 var cuentaPrimaria = cuentaPrimaria()
 var cuentaSecundaria = cuentaSecundaria()
 }
-objet
+
