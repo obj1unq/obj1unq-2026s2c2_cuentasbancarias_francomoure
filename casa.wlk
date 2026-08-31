@@ -30,3 +30,16 @@ object cuentaGastos{
     }
 }
 
+object cuentaPrimaria{
+
+}
+
+object cuentaSecundaria{
+
+}
+
+object cuentaCombinada{
+var cuentaPrimaria = cuentaPrimaria()
+var cuentaSecundaria = cuentaSecundaria()
+}
+objet
