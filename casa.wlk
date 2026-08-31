@@ -52,7 +52,7 @@ var cuentaSecundaria = cuentaGastos
       saldo -= monto
   }
   method saldo(){
-      return saldo
+      return cuentaPrimaria.saldo() + cuentaSecundaria.saldo()
   }
 }
 
