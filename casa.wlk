@@ -15,7 +15,11 @@ if(monto >= costoDeTransaccion){
       saldo -= monto
   }
   method saldo(){
-      return saldo
+      if(saldo < 0){
+        return 0
+      }else{
+        return saldo
+      }
   }
 }
 
@@ -33,8 +37,12 @@ object cuentaGastos{
         
     }
     method saldo(){
+      if(saldo < 0){
+        return 0
+      }else{
         return saldo
-    }
+      }
+  }
 }
 
 object cuentaCombinada{
