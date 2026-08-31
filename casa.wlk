@@ -6,6 +6,9 @@ object cuentaCorriente{
   
   method depositar(monto){
       costoDeTransaccion = 25
+if(monto >= costoDeTransaccion){
+        return error"debe depositar mas que 25"
+      }
       saldo += monto
   }
   method extraer(monto){
@@ -20,8 +23,12 @@ object cuentaGastos{
     var saldo = 650
     
     method depositar(monto){
-        
-    }
+        costoDeTransaccion = 25
+        if(monto >= costoDeTransaccion){
+          return error"debe depositar mas que 25"
+        }
+        saldo -= monto
+      }
     method extraer(monto){
         
     }
@@ -33,5 +40,19 @@ object cuentaGastos{
 object cuentaCombinada{
 var cuentaPrimaria = cuentaCorriente
 var cuentaSecundaria = cuentaGastos
+
+  method depositar(monto){
+      costoDeTransaccion = 25
+      if(monto >= costoDeTransaccion){
+        return error"debe depositar mas que 25"
+      }
+      saldo += monto
+  }
+  method extraer(monto){
+      saldo -= monto
+  }
+  method saldo(){
+      return saldo
+  }
 }
 
