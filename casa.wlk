@@ -96,7 +96,7 @@ object cuentaCombinada{
 			self.validarExtraer(monto)
 		
 			//cuando se que tengo para pagar, decido como pagar
-			if(monto < cuentaPrimaria.saldo()){
+			if(monto <= cuentaPrimaria.saldo()){
 				cuentaPrimaria.extraer(monto)
 			}else{
 				cuentaPrimaria.extraer(monto)
