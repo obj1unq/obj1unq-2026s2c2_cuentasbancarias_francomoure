@@ -92,7 +92,22 @@ object cuentaCombinada{
 	}
 
 	method extraer(monto){
+			//primero valido que tenga para pagar
+			self.validarExtraer(monto)
+		
+			//cuando se que tengo para pagar, decido como pagar
+			if(monto < cuentaPrimaria.saldo()){
+				cuentaPrimaria.extraer(monto)
+			}else{
+				cuentaPrimaria.extraer(monto)
+				cuentaSecundaria.extraer(//aca iria lo que falta pagar...) 
+			}
+	}
 
+	method validarExtraerMonto(monto){
+		if(monto > self.saldo()){
+			self.error("saldo total insuficiente para pagar")
+		}
 	}
 
 	method sueldo(){
