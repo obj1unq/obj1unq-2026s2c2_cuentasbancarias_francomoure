@@ -1,7 +1,6 @@
 object casa{
 	var cuentaDefault = cuentaCorriente
-	var mes = 1	
-	var totalGastadoEsteMes = 0 /////////////////////
+	var totalGastadoEsteMes = 0
 	var porcentajeDeViveres = 40
 	var reparaciones = 0
 
@@ -13,8 +12,8 @@ object casa{
 
 	method validarGastar(monto)??
 
-	method mes(_mes){
-		mes = _mes
+	method cambiarMes(){
+		totalGastadoEsteMes = 0
 	}
 
 	method debeHacerReparaciones(){
