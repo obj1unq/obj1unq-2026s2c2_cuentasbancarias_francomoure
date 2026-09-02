@@ -77,7 +77,9 @@ object cuentaGastos{
 	}
 
 	method validarDeposito(monto){
-		if(costoDeposito)
+		if(costoDeposito > monto){
+			self.error("debe depositar mas dinero")
+		}
 	}
 }
 
